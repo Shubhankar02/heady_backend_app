@@ -5,7 +5,7 @@ const Category = require('../models/category');
 // Post new category
 router.post('/categories', (req, res) => {
     const name = req.body.name;
-    const desc = req.body.desc
+    const desc = req.body.desc;
 
     const newCategory = {
         name: name,
@@ -33,5 +33,10 @@ router.get('/categories', (req, res) => {
         }
     })
 });
+
+// Update category
+router.put('/categories/:id', (req, res) => {
+    
+})
 
 module.exports = router;
