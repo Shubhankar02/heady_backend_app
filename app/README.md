@@ -1,18 +1,18 @@
 <h1>Heady Backend Application</h1>
 <br>
-<p><strong>Application structure</strong><p>
+<p><strong>Application structure</strong></p>
 <ul>
     <li>
         Category
         <ul>
             <li>
                 Sub-category
-            </li>
                 <ul>
                     <li>
                         Products
                     </li>
                 </ul>
+            </li>   
         </ul>
     </li>
 </ul>
