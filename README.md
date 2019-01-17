@@ -17,4 +17,4 @@
     </li>
 </ul>
 <p>Application run on localhost:3000 and developed using POSTMAN</p>
-<p>Application follow the CRUD operation on ever level. I use Node, Express, Mongoose and Mongodb for production. To initiate application run 'Node app.js'. </p>
+<p>Application follow the CRUD operation on every level. I used NodeJS, Express, Mongoose and Mongodb for production. To initiate application run 'Node app.js'.</p>
