@@ -1,3 +1,8 @@
+/*
+ *  Schema File for categories 
+ */
+
+
 const mongoose = require('mongoose');
 
 const subCategorySchema = mongoose.Schema({

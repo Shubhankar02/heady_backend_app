@@ -1,3 +1,8 @@
+/*
+ *  Routing File for dealing with categories 
+ */
+
+
 const express = require('express');
 const router = express.Router({mergeParams: true});
 const Category = require('../models/category');
@@ -5,7 +10,7 @@ const SubCategory = require('../models/subCategory');
 const Product = require('../models/product');
 
 // POST the new Product
-router.post('/categories/:id/subcat/:subId/product', (req, res) => {
+router.post('/', (req, res) => {
     const data = {
         name: req.body.name,
         desc: req.body.desc,
@@ -38,23 +43,23 @@ router.post('/categories/:id/subcat/:subId/product', (req, res) => {
 });
 
 // Get all products
-router.get('/categories/:id/subcat/:subId/product', (req, res) => {
+router.get('/', (req, res) => {
     Product.find({}, (err, products) => {
         res.send(products)
     });
 });
 
 // Get particular product
-router.get('/categories/:id/subcat/:subId/product/:productId', (req, res) => {
-    Product.findById(req.params.productId, (err, product) => {
+router.get('/:id', (req, res) => {
+    Product.findById(req.params.id, (err, product) => {
         res.send(product);
     });
 });
 
 // Update product
-router.put('/categories/:id/subcat/:subId/product/:productId', (req, res) => {
+router.put('/:id', (req, res) => {
     const newData = {name : req.body.name, desc : req.body.desc, price : req.body.price}
-    Product.findByIdAndUpdate(req.params.productId, {$set : newData}, (err, product) => {
+    Product.findByIdAndUpdate(req.params.id, {$set : newData}, (err, product) => {
         if(err) {
             console.log(err);
         } else {
@@ -64,8 +69,8 @@ router.put('/categories/:id/subcat/:subId/product/:productId', (req, res) => {
 });
 
 // Delete product
-router.delete('/categories/:id/subcat/:subId/product/:productId', (req, res) => {
-    Product.findByIdAndRemove(req.params.productId, (err) => {
+router.delete('/:id', (req, res) => {
+    Product.findByIdAndRemove(req.params.id, (err) => {
         if(err) {
             console.log(err);
         } else {
