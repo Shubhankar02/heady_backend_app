@@ -1,6 +1,6 @@
 <h1>Heady Backend Application</h1>
 <br>
-<p><strong>Application structure</string><p>
+<p><strong>Application structure</strong><p>
 <ul>
     <li>
         Category
